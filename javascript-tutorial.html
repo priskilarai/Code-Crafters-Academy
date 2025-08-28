@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Tutorial - CodeCrafters Academy</title>
+    <meta name="description" content="Master modern JavaScript with ES6+, DOM manipulation, async programming, and API integration.">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="pages.css">
+    <link rel="stylesheet" href="tutorial.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iOCIgZmlsbD0iIzI1NjNFQiIvPgo8cGF0aCBkPSJNOCAxMkgxNk0xNiAxMkgyNE04IDE2SDE2TTE2IDE2SDI0TTggMjBIMTZNMTYgMjBIMjQiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+Cjwvc3ZnPgo=">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <a href="index.html" class="nav-logo">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <rect width="32" height="32" rx="8" fill="#2563EB"/>
+                        <path d="M8  12H16M16 12H24M8 16H16M16 16H24M8 20H16M16 20H24" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    CodeCrafters Academy
+                </a>
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-dropdown">
+                        <a href="tutorials.html" class="nav-link active">Tutorials</a>
+                        <ul class="nav-dropdown-menu">
+                            <li><a href="html-tutorial.html">HTML</a></li>
+                            <li><a href="css-tutorial.html">CSS</a></li>
+                            <li><a href="javascript-tutorial.html">JavaScript</a></li>
+                            <li><a href="responsive-design.html">Responsive Design</a></li>
+                            <li><a href="accessibility.html">Web Accessibility</a></li>
+                            <li><a href="best-practices.html">Performance & SEO</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="tutorial-main">
+        <aside class="tutorial-sidebar">
+            <nav class="tutorial-nav">
+                <h3>JavaScript Tutorial</h3>
+                <ul class="tutorial-menu">
+                    <li><a href="#js-basics" class="tutorial-link active">JavaScript Basics</a></li>
+                    <li><a href="#dom-manipulation" class="tutorial-link">DOM Manipulation</a></li>
+                    <li><a href="#events" class="tutorial-link">Events</a></li>
+                    <li><a href="#async" class="tutorial-link">Async Programming</a></li>
+                    <li><a href="#apis" class="tutorial-link">API Integration</a></li>
+                    <li><a href="#es6-features" class="tutorial-link">ES6+ Features</a></li>
+                </ul>
+            </nav>
+            
+            <div class="tutorial-progress">
+                <h4>Progress</h4>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 0%"></div>
+                </div>
+                <span class="progress-text">0% Complete</span>
+            </div>
+        </aside>
+
+        <div class="tutorial-content">
+            <div class="container">
+                <header class="tutorial-header">
+                    <div class="tutorial-breadcrumb">
+                        <a href="tutorials.html">Tutorials</a> / <span>JavaScript Mastery</span>
+                    </div>
+                    <h1>JavaScript Mastery</h1>
+                    <div class="tutorial-meta">
+                        <span class="tutorial-level advanced">Advanced</span>
+                        <span class="tutorial-duration">6 hours</span>
+                        <span class="tutorial-updated">Updated: January 2025</span>
+                    </div>
+                </header>
+
+                <section id="js-basics" class="tutorial-section">
+                    <h2>Modern JavaScript Fundamentals</h2>
+                    <p>JavaScript is the programming language of the web. Modern JavaScript (ES6+) includes powerful features like arrow functions, destructuring, modules, and more.</p>
+                    
+                    <div class="js-demo">
+                        <h3>Interactive JavaScript Console</h3>
+                        <div class="js-console">
+                            <div class="console-output" id="consoleOutput">
+                                <div class="console-line">Welcome to the JavaScript Console!</div>
+                                <div class="console-line">Type JavaScript code below and press Enter to execute.</div>
+                            </div>
+                            <div class="console-input-container">
+                                <span class="console-prompt">&gt;</span>
+                                <input type="text" class="console-input" id="consoleInput" placeholder="console.log('Hello, World!')">
+                            </div>
+                        </div>
+                        
+                        <div class="code-example">
+                            <h4>ES6+ Features Example</h4>
+                            <pre><code>// Arrow Functions
+const greet = (name) => `Hello, ${name}!`;
+
+// Destructuring
+const { name, age } = person;
+const [first, second] = array;
+
+// Template Literals
+const message = `Welcome ${name}, you are ${age} years old`;
+
+// Async/Await
+const fetchData = async () => {
+    try {
+        const response = await fetch('/api/data');
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Error:', error);
+    }
+};</code></pre>
+                            <button class="copy-btn" data-code="// Arrow Functions
+const greet = (name) => `Hello, ${name}!`;
+
+// Destructuring
+const { name, age } = person;
+const [first, second] = array;
+
+// Template Literals
+const message = `Welcome ${name}, you are ${age} years old`;
+
+// Async/Await
+const fetchData = async () => {
+    try {
+        const response = await fetch('/api/data');
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Error:', error);
+    }
+};">Copy Code</button>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="dom-manipulation" class="tutorial-section">
+                    <h2>DOM Manipulation</h2>
+                    <p>The Document Object Model (DOM) allows JavaScript to interact with HTML elements, modify content, and create dynamic user interfaces.</p>
+                    
+                    <div class="dom-demo">
+                        <h3>Interactive DOM Demo</h3>
+                        <div class="dom-playground">
+                            <div class="demo-element" id="demoElement">
+                                <h4>Demo Element</h4>
+                                <p>This element can be modified using the controls below.</p>
+                            </div>
+                            
+                            <div class="dom-controls">
+                                <button onclick="changeText()">Change Text</button>
+                                <button onclick="changeColor()">Change Color</button>
+                                <button onclick="addClass()">Add Class</button>
+                                <button onclick="createElement()">Create Element</button>
+                                <button onclick="removeElement()">Remove Element</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="events" class="tutorial-section">
+                    <h2>Event Handling</h2>
+                    <p>Events allow JavaScript to respond to user interactions like clicks, keyboard input, mouse movements, and more.</p>
+                    
+                    <div class="events-demo">
+                        <h3>Event Demonstration</h3>
+                        <div class="event-playground">
+                            <div class="event-area" id="eventArea">
+                                <p>Interact with this area to see different events in action!</p>
+                                <button class="event-btn" id="eventButton">Click Me!</button>
+                            </div>
+                            <div class="event-log" id="eventLog">
+                                <h4>Event Log</h4>
+                                <div class="log-content" id="logContent">
+                                    <p>Events will appear here...</p>
+                                </div>
+                                <button onclick="clearEventLog()" class="clear-log-btn">Clear Log</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="async" class="tutorial-section">
+                    <h2>Asynchronous Programming</h2>
+                    <p>Learn how to handle asynchronous operations using Promises, async/await, and the Fetch API for modern web applications.</p>
+                    
+                    <div class="async-demo">
+                        <h3>Fetch API Demo</h3>
+                        <div class="api-demo">
+                            <button onclick="fetchRandomQuote()" class="btn btn-primary">Fetch Random Quote</button>
+                            <div class="api-result" id="quoteResult">
+                                <p>Click the button above to fetch a random quote!</p>
+                            </div>
+                            <div class="loading-indicator" id="loadingIndicator" style="display: none;">
+                                <div class="spinner"></div>
+                                <p>Loading...</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="apis" class="tutorial-section">
+                    <h2>API Integration</h2>
+                    <p>Modern web applications rely heavily on APIs for data exchange. Learn how to work with REST APIs, handle responses, and manage errors.</p>
+                    
+                    <div class="api-demo-section">
+                        <h3>Weather API Demo</h3>
+                        <div class="weather-demo">
+                            <div class="weather-controls">
+                                <input type="text" id="cityInput" placeholder="Enter city name" value="London">
+                                <button onclick="getWeather()" class="btn btn-primary">Get Weather</button>
+                            </div>
+                            <div class="weather-result" id="weatherResult">
+                                <p>Enter a city name to see weather information!</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="es6-features" class="tutorial-section">
+                    <h2>ES6+ Modern Features</h2>
+                    <p>Explore the latest JavaScript features that make code more readable, maintainable, and powerful.</p>
+                    
+                    <div class="es6-demo">
+                        <h3>Feature Demonstrations</h3>
+                        <div class="feature-tabs">
+                            <button class="feature-tab active" onclick="showFeature('destructuring')">Destructuring</button>
+                            <button class="feature-tab" onclick="showFeature('spread')">Spread Operator</button>
+                            <button class="feature-tab" onclick="showFeature('modules')">Modules</button>
+                            <button class="feature-tab" onclick="showFeature('classes')">Classes</button>
+                        </div>
+                        
+                        <div class="feature-content" id="featureContent">
+                            <!-- Dynamic content will be loaded here -->
+                        </div>
+                    </div>
+                </section>
+
+                <nav class="tutorial-navigation">
+                    <a href="css-tutorial.html" class="nav-btn nav-prev">
+                        <span>← Previous: CSS Tutorial</span>
+                    </a>
+                    <a href="responsive-design.html" class="nav-btn nav-next">
+                        <span>Next: Responsive Design →</span>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>CodeCrafters Academy</h3>
+                    <p>Empowering developers with comprehensive web development education.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="tutorials.html">Tutorials</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CodeCrafters Academy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="tutorial-navigation.js"></script>
+    <script src="javascript-demos.js"></script>
+</body>
+</html>

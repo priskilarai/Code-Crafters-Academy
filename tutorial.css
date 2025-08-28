@@ -1,0 +1,456 @@
+/* Tutorial-specific styles */
+
+.tutorial-main {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    min-height: calc(100vh - 4rem);
+    margin-top: 4rem;
+}
+
+.tutorial-sidebar {
+    background: var(--neutral-100);
+    padding: var(--spacing-6);
+    border-right: 1px solid var(--neutral-200);
+    position: sticky;
+    top: 4rem;
+    height: calc(100vh - 4rem);
+    overflow-y: auto;
+}
+
+.tutorial-nav h3 {
+    margin-bottom: var(--spacing-6);
+    color: var(--neutral-800);
+    font-size: 1.25rem;
+}
+
+.tutorial-menu {
+    list-style: none;
+    margin-bottom: var(--spacing-8);
+}
+
+.tutorial-menu li {
+    margin-bottom: var(--spacing-2);
+}
+
+.tutorial-link {
+    display: block;
+    padding: var(--spacing-2) var(--spacing-3);
+    color: var(--neutral-600);
+    text-decoration: none;
+    border-radius: 0.5rem;
+    transition: all var(--transition-fast);
+    font-size: 0.95rem;
+}
+
+.tutorial-link:hover,
+.tutorial-link.active {
+    background: var(--primary-100);
+    color: var(--primary-700);
+}
+
+.tutorial-progress {
+    background: white;
+    padding: var(--spacing-4);
+    border-radius: 0.5rem;
+    border: 1px solid var(--neutral-200);
+}
+
+.tutorial-progress h4 {
+    margin-bottom: var(--spacing-3);
+    font-size: 1rem;
+    color: var(--neutral-700);
+}
+
+.progress-bar {
+    background: var(--neutral-200);
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: var(--spacing-2);
+}
+
+.progress-fill {
+    background: var(--primary-600);
+    height: 100%;
+    transition: width var(--transition-base);
+}
+
+.progress-text {
+    font-size: 0.875rem;
+    color: var(--neutral-600);
+}
+
+.tutorial-content {
+    padding: var(--spacing-8) var(--spacing-4);
+    overflow: auto;
+}
+
+.tutorial-header {
+    margin-bottom: var(--spacing-12);
+}
+
+.tutorial-breadcrumb {
+    margin-bottom: var(--spacing-4);
+    font-size: 0.875rem;
+    color: var(--neutral-500);
+}
+
+.tutorial-breadcrumb a {
+    color: var(--primary-600);
+    text-decoration: none;
+}
+
+.tutorial-breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.tutorial-header h1 {
+    margin-bottom: var(--spacing-4);
+    font-size: 2.5rem;
+}
+
+.tutorial-section {
+    margin-bottom: var(--spacing-16);
+    scroll-margin-top: 5rem;
+}
+
+.tutorial-section h2 {
+    margin-bottom: var(--spacing-6);
+    color: var(--neutral-800);
+    font-size: 2rem;
+    border-bottom: 2px solid var(--primary-600);
+    padding-bottom: var(--spacing-2);
+}
+
+.tutorial-section h3 {
+    margin: var(--spacing-8) 0 var(--spacing-4) 0;
+    color: var(--primary-600);
+}
+
+.tutorial-section p {
+    margin-bottom: var(--spacing-4);
+    line-height: 1.7;
+    font-size: 1.1rem;
+}
+
+/* Code Examples */
+.code-example {
+    margin: var(--spacing-8) 0;
+    background: var(--neutral-900);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    position: relative;
+    min-height: auto;
+    overflow: visible;
+}
+
+.code-example h3 {
+    background: var(--neutral-800);
+    color: white;
+    padding: var(--spacing-3) var(--spacing-4);
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.code-example pre {
+    margin: 0;
+    padding: var(--spacing-4);
+    overflow-x: auto;
+    font-family: 'Fira Code', 'Monaco', 'Consolas', monospace;
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+.code-example code {
+    color: #f8f8f2;
+    background: none;
+    padding: 0;
+    border-radius: 0;
+}
+
+.copy-btn {
+    position: absolute;
+    top: var(--spacing-2);
+    right: var(--spacing-2);
+    background: var(--neutral-700);
+    color: white;
+    border: none;
+    padding: var(--spacing-1) var(--spacing-2);
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: background var(--transition-fast);
+}
+
+.copy-btn:hover {
+    background: var(--neutral-600);
+}
+
+/* Demo Sections */
+.semantic-demo {
+    margin: var(--spacing-8) 0;
+}
+
+.semantic-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-4);
+    margin-top: var(--spacing-6);
+}
+
+.semantic-item {
+    background: white;
+    padding: var(--spacing-4);
+    border-radius: 0.5rem;
+    border: 1px solid var(--neutral-200);
+    text-align: center;
+    transition: all var(--transition-fast);
+}
+
+.semantic-item:hover {
+    border-color: var(--primary-300);
+    box-shadow: var(--shadow-sm);
+}
+
+.semantic-item code {
+    background: var(--primary-100);
+    color: var(--primary-700);
+    padding: var(--spacing-1) var(--spacing-2);
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+    display: block;
+    margin-bottom: var(--spacing-2);
+    font-family: 'Fira Code', monospace;
+}
+
+.semantic-item p {
+    margin: 0;
+    font-size: 0.875rem;
+    color: var(--neutral-600);
+}
+
+.form-demo {
+    margin: var(--spacing-8) 0;
+    background: white;
+    padding: var(--spacing-6);
+    border-radius: 0.5rem;
+    border: 1px solid var(--neutral-200);
+}
+
+.demo-form {
+    max-width: 600px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-4);
+    margin-bottom: var(--spacing-4);
+}
+
+.multimedia-demo {
+    margin: var(--spacing-8) 0;
+}
+
+.demo-video {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 0.5rem;
+    margin-bottom: var(--spacing-6);
+}
+
+.demo-audio {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: var(--spacing-6);
+}
+
+.demo-figure {
+    margin: var(--spacing-6) 0;
+    text-align: center;
+}
+
+.demo-figure img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow-md);
+}
+
+.demo-figure figcaption {
+    margin-top: var(--spacing-3);
+    font-style: italic;
+    color: var(--neutral-600);
+    font-size: 0.9rem;
+}
+
+.accessibility-demo {
+    margin: var(--spacing-8) 0;
+}
+
+.feature-list {
+    list-style: none;
+    margin: var(--spacing-6) 0;
+}
+
+.feature-list li {
+    margin-bottom: var(--spacing-3);
+    padding-left: var(--spacing-6);
+    position: relative;
+}
+
+.feature-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--primary-600);
+    font-weight: 700;
+}
+
+.example-accessible-form {
+    background: white;
+    padding: var(--spacing-6);
+    border-radius: 0.5rem;
+    border: 1px solid var(--neutral-200);
+    margin-top: var(--spacing-6);
+}
+
+.example-accessible-form h4 {
+    margin-bottom: var(--spacing-4);
+    color: var(--neutral-800);
+}
+
+.radio-group {
+    display: flex;
+    gap: var(--spacing-6);
+    flex-wrap: wrap;
+}
+
+.radio-group input[type="radio"] {
+    margin-right: var(--spacing-2);
+}
+
+.practices-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-6);
+    margin-top: var(--spacing-8);
+}
+
+.practice-card {
+    background: white;
+    padding: var(--spacing-6);
+    border-radius: 0.5rem;
+    border: 1px solid var(--neutral-200);
+    transition: all var(--transition-fast);
+}
+
+.practice-card:hover {
+    border-color: var(--primary-300);
+    box-shadow: var(--shadow-sm);
+}
+
+.practice-card h3 {
+    margin-bottom: var(--spacing-3);
+    color: var(--primary-600);
+}
+
+.practice-card p {
+    margin: 0;
+    color: var(--neutral-600);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.tutorial-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: var(--spacing-16);
+    padding-top: var(--spacing-8);
+    border-top: 1px solid var(--neutral-200);
+}
+
+.nav-btn {
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-3) var(--spacing-6);
+    background: white;
+    color: var(--primary-600);
+    text-decoration: none;
+    border: 1px solid var(--primary-600);
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: all var(--transition-fast);
+}
+
+.nav-btn:hover {
+    background: var(--primary-600);
+    color: white;
+    transform: translateY(-1px);
+}
+
+.nav-next {
+    margin-left: auto;
+}
+
+/* Range Input Styling */
+#demo-range {
+    margin-bottom: var(--spacing-2);
+}
+
+#rangeValue {
+    display: block;
+    text-align: center;
+    font-weight: 500;
+    color: var(--primary-600);
+}
+
+/* Responsive Tutorial Layout */
+@media (max-width: 1024px) {
+    .tutorial-main {
+        grid-template-columns: 250px 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .tutorial-main {
+        grid-template-columns: 1fr;
+    }
+    
+    .tutorial-sidebar {
+        position: static;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid var(--neutral-200);
+    }
+    
+    .tutorial-nav {
+        display: none;
+    }
+    
+    .tutorial-content {
+        padding: var(--spacing-6) var(--spacing-3);
+    }
+    
+    .tutorial-header h1 {
+        font-size: 2rem;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .tutorial-navigation {
+        flex-direction: column;
+        gap: var(--spacing-4);
+    }
+    
+    .nav-btn {
+        text-align: center;
+    }
+    
+    .nav-next {
+        margin-left: 0;
+    }
+}

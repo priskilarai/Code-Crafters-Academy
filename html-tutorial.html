@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Tutorial - CodeCrafters Academy</title>
+    <meta name="description" content="Master HTML5 with our comprehensive tutorial covering semantic elements, forms, multimedia, and accessibility.">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="pages.css">
+    <link rel="stylesheet" href="tutorial.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <a href="index.html" class="nav-logo">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <rect width="32" height="32" rx="8" fill="#2563EB"/>
+                        <path d="M8 12H16M16 12H24M8 16H16M16 16H24M8 20H16M16 20H24" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    CodeCrafters Academy
+                </a>
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-dropdown">
+                        <a href="tutorials.html" class="nav-link active">Tutorials</a>
+                        <ul class="nav-dropdown-menu">
+                            <li><a href="html-tutorial.html">HTML</a></li>
+                            <li><a href="css-tutorial.html">CSS</a></li>
+                            <li><a href="javascript-tutorial.html">JavaScript</a></li>
+                            <li><a href="responsive-design.html">Responsive Design</a></li>
+                            <li><a href="accessibility.html">Web Accessibility</a></li>
+                            <li><a href="best-practices.html">Performance & SEO</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="tutorial-main">
+        <aside class="tutorial-sidebar">
+            <nav class="tutorial-nav">
+                <h3>HTML5 Tutorial</h3>
+                <ul class="tutorial-menu">
+                    <li><a href="#introduction" class="tutorial-link active">Introduction</a></li>
+                    <li><a href="#semantic-elements" class="tutorial-link">Semantic Elements</a></li>
+                    <li><a href="#forms" class="tutorial-link">Forms & Input</a></li>
+                    <li><a href="#multimedia" class="tutorial-link">Multimedia</a></li>
+                    <li><a href="#accessibility" class="tutorial-link">Accessibility</a></li>
+                    <li><a href="#best-practices" class="tutorial-link">Best Practices</a></li>
+                </ul>
+            </nav>
+            
+            <div class="tutorial-progress">
+                <h4>Progress</h4>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 0%"></div>
+                </div>
+                <span class="progress-text">0% Complete</span>
+            </div>
+        </aside>
+
+        <div class="tutorial-content">
+            <div class="container">
+                <header class="tutorial-header">
+                    <div class="tutorial-breadcrumb">
+                        <a href="tutorials.html">Tutorials</a> / <span>HTML5 Fundamentals</span>
+                    </div>
+                    <h1>HTML5 Fundamentals</h1>
+                    <div class="tutorial-meta">
+                        <span class="tutorial-level beginner">Beginner</span>
+                        <span class="tutorial-duration">2 hours</span>
+                        <span class="tutorial-updated">Updated: January 2025</span>
+                    </div>
+                </header>
+
+                <section id="introduction" class="tutorial-section">
+                    <h2>Introduction to HTML5</h2>
+                    <p>HTML5 is the latest version of HyperText Markup Language, the standard markup language for creating web pages. It introduces semantic elements, improved forms, multimedia support, and APIs that make web development more powerful and accessible.</p>
+                    
+                    <div class="code-example">
+                        <h3>Basic HTML5 Document Structure</h3>
+                        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;nav&gt;...&lt;/nav&gt;
+    &lt;/header&gt;
+    &lt;main&gt;
+        &lt;section&gt;...&lt;/section&gt;
+        &lt;article&gt;...&lt;/article&gt;
+    &lt;/main&gt;
+    &lt;footer&gt;...&lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                        <button class="copy-btn" data-code="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;nav&gt;...&lt;/nav&gt;
+    &lt;/header&gt;
+    &lt;main&gt;
+        &lt;section&gt;...&lt;/section&gt;
+        &lt;article&gt;...&lt;/article&gt;
+    &lt;/main&gt;
+    &lt;footer&gt;...&lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;">Copy Code</button>
+                    </div>
+                </section>
+
+                <section id="semantic-elements" class="tutorial-section">
+                    <h2>Semantic HTML5 Elements</h2>
+                    <p>Semantic elements clearly describe their meaning to both the browser and the developer, improving accessibility and SEO.</p>
+                    
+                    <div class="semantic-demo">
+                        <h3>Common Semantic Elements</h3>
+                        <div class="semantic-grid">
+                            <div class="semantic-item">
+                                <code>&lt;header&gt;</code>
+                                <p>Page or section header</p>
+                            </div>
+                            <div class="semantic-item">
+                                <code>&lt;nav&gt;</code>
+                                <p>Navigation links</p>
+                            </div>
+                            <div class="semantic-item">
+                                <code>&lt;main&gt;</code>
+                                <p>Main content area</p>
+                            </div>
+                            <div class="semantic-item">
+                                <code>&lt;section&gt;</code>
+                                <p>Thematic grouping</p>
+                            </div>
+                            <div class="semantic-item">
+                                <code>&lt;article&gt;</code>
+                                <p>Self-contained content</p>
+                            </div>
+                            <div class="semantic-item">
+                                <code>&lt;aside&gt;</code>
+                                <p>Sidebar content</p>
+                            </div>
+                            <div class="semantic-item">
+                                <code>&lt;footer&gt;</code>
+                                <p>Page or section footer</p>
+                            </div>
+                            <div class="semantic-item">
+                                <code>&lt;figure&gt;</code>
+                                <p>Self-contained media</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="forms" class="tutorial-section">
+                    <h2>HTML5 Forms and Input Types</h2>
+                    <p>HTML5 introduced new input types and form validation features that enhance user experience and reduce JavaScript requirements.</p>
+                    
+                    <div class="form-demo">
+                        <h3>Interactive Form Example</h3>
+                        <form class="demo-form" id="demoForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="demo-email">Email</label>
+                                    <input type="email" id="demo-email" placeholder="user@example.com" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="demo-tel">Phone</label>
+                                    <input type="tel" id="demo-tel" placeholder="+1 (555) 123-4567">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="demo-date">Date</label>
+                                    <input type="date" id="demo-date">
+                                </div>
+                                <div class="form-group">
+                                    <label for="demo-number">Number (1-100)</label>
+                                    <input type="number" id="demo-number" min="1" max="100">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="demo-range">Range Slider</label>
+                                <input type="range" id="demo-range" min="0" max="100" value="50">
+                                <output for="demo-range" id="rangeValue">50</output>
+                            </div>
+                            <div class="form-group">
+                                <label for="demo-color">Color Picker</label>
+                                <input type="color" id="demo-color" value="#3b82f6">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit Form</button>
+                        </form>
+                    </div>
+                </section>
+
+                <section id="multimedia" class="tutorial-section">
+                    <h2>Multimedia Integration</h2>
+                    <p>HTML5 provides native support for audio and video elements, making multimedia integration seamless.</p>
+                    
+                    <div class="multimedia-demo">
+                        <h3>Video Element</h3>
+                        <video class="demo-video" controls poster="https://images.pexels.com/photos/11035380/pexels-photo-11035380.jpeg?auto=compress&cs=tinysrgb&w=800">
+                            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                            <p>Your browser doesn't support video. <a href="https://www.w3schools.com/html/mov_bbb.mp4">Download the video</a>.</p>
+                        </video>
+                        
+                        <h3>Audio Element</h3>
+                        <audio class="demo-audio" controls>
+                            <source src="https://www.w3schools.com/html/horse.ogg" type="audio/ogg">
+                            <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+                            <p>Your browser doesn't support audio. <a href="https://www.w3schools.com/html/horse.mp3">Download the audio</a>.</p>
+                        </audio>
+                        
+                        <figure class="demo-figure">
+                            <img src="https://images.pexels.com/photos/11035471/pexels-photo-11035471.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Code editor showing HTML">
+                            <figcaption>Figure 1: Modern code editor displaying semantic HTML structure</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                <section id="accessibility" class="tutorial-section">
+                    <h2>Accessibility Best Practices</h2>
+                    <p>Creating accessible websites ensures your content is usable by everyone, including people using assistive technologies.</p>
+                    
+                    <div class="accessibility-demo">
+                        <h3>Accessibility Features</h3>
+                        <ul class="feature-list">
+                            <li><strong>Alt Text:</strong> Describe images for screen readers</li>
+                            <li><strong>ARIA Labels:</strong> Provide context for interactive elements</li>
+                            <li><strong>Focus Management:</strong> Ensure keyboard navigation works properly</li>
+                            <li><strong>Color Contrast:</strong> Maintain readable text contrast ratios</li>
+                            <li><strong>Semantic Markup:</strong> Use proper heading hierarchy and landmarks</li>
+                        </ul>
+                        
+                        <div class="example-accessible-form">
+                            <h4>Accessible Form Example</h4>
+                            <form>
+                                <fieldset>
+                                    <legend>Contact Preferences</legend>
+                                    <div class="radio-group" role="group" aria-labelledby="contact-legend">
+                                        <input type="radio" id="email-pref" name="contact" value="email">
+                                        <label for="email-pref">Email</label>
+                                        
+                                        <input type="radio" id="phone-pref" name="contact" value="phone">
+                                        <label for="phone-pref">Phone</label>
+                                        
+                                        <input type="radio" id="mail-pref" name="contact" value="mail">
+                                        <label for="mail-pref">Mail</label>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="best-practices" class="tutorial-section">
+                    <h2>HTML5 Best Practices</h2>
+                    <div class="practices-grid">
+                        <article class="practice-card">
+                            <h3>Validation</h3>
+                            <p>Always validate your HTML using the W3C validator to ensure standards compliance and catch errors early.</p>
+                        </article>
+                        <article class="practice-card">
+                            <h3>Performance</h3>
+                            <p>Optimize images, minimize HTTP requests, and use appropriate compression for faster loading times.</p>
+                        </article>
+                        <article class="practice-card">
+                            <h3>SEO</h3>
+                            <p>Use proper meta tags, structured data, and semantic markup to improve search engine visibility.</p>
+                        </article>
+                        <article class="practice-card">
+                            <h3>Security</h3>
+                            <p>Sanitize user input, validate form data, and follow security best practices to protect users.</p>
+                        </article>
+                    </div>
+                </section>
+
+                <nav class="tutorial-navigation">
+                    <a href="tutorials.html" class="nav-btn nav-prev">
+                        <span>← Back to Tutorials</span>
+                    </a>
+                    <a href="css-tutorial.html" class="nav-btn nav-next">
+                        <span>Next: CSS Tutorial →</span>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>CodeCrafters Academy</h3>
+                    <p>Empowering developers with comprehensive web development education.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="tutorials.html">Tutorials</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CodeCrafters Academy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="tutorial-navigation.js"></script>
+</body>
+</html>

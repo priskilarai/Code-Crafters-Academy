@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Demo</title>
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iOCIgZmlsbD0iIzI1NjNFQiIvPgo8cGF0aCBkPSJNOCAxMkgxNk0xNiAxMkgyNE04IDE2SDE2TTE2IDE2SDI0TTggMjBIMTZNMTYgMjBIMjQiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+Cjwvc3ZnPgo=">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.5;
+            color: #374151;
+        }
+        
+        .demo-container {
+            display: grid;
+            grid-template-areas:
+                "header header"
+                "sidebar main"
+                "footer footer";
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: auto 1fr auto;
+            min-height: 100vh;
+            gap: 1px;
+            background: #e5e7eb;
+        }
+        
+        .demo-header {
+            grid-area: header;
+            background: #3b82f6;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        .demo-sidebar {
+            grid-area: sidebar;
+            background: #f3f4f6;
+            padding: 1rem;
+        }
+        
+        .demo-main {
+            grid-area: main;
+            background: white;
+            padding: 1rem;
+        }
+        
+        .demo-footer {
+            grid-area: footer;
+            background: #6b7280;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        .demo-card {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .demo-nav {
+            list-style: none;
+        }
+        
+        .demo-nav li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .demo-nav a {
+            color: #4b5563;
+            text-decoration: none;
+            padding: 0.25rem 0;
+            display: block;
+            border-radius: 0.25rem;
+            transition: all 0.2s ease;
+        }
+        
+        .demo-nav a:hover {
+            background: #e5e7eb;
+            color: #3b82f6;
+        }
+        
+        /* Tablet Layout */
+        @media (max-width: 1023px) and (min-width: 768px) {
+            .demo-container {
+                grid-template-areas:
+                    "header header"
+                    "main sidebar"
+                    "footer footer";
+                grid-template-columns: 1fr 250px;
+            }
+            
+            .demo-sidebar {
+                background: #fef3c7;
+            }
+        }
+        
+        /* Mobile Layout */
+        @media (max-width: 767px) {
+            .demo-container {
+                grid-template-areas:
+                    "header"
+                    "main"
+                    "sidebar"
+                    "footer";
+                grid-template-columns: 1fr;
+                grid-template-rows: auto 1fr auto auto;
+            }
+            
+            .demo-sidebar {
+                background: #fecaca;
+            }
+            
+            .demo-nav {
+                display: flex;
+                gap: 1rem;
+                overflow-x: auto;
+            }
+            
+            .demo-nav li {
+                margin-bottom: 0;
+                white-space: nowrap;
+            }
+        }
+        
+        /* Very small screens */
+        @media (max-width: 480px) {
+            .demo-header,
+            .demo-main,
+            .demo-sidebar,
+            .demo-footer {
+                padding: 0.75rem;
+            }
+            
+            .demo-card {
+                padding: 0.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-container">
+        <header class="demo-header">
+            Responsive Header
+        </header>
+        
+        <aside class="demo-sidebar">
+            <nav>
+                <ul class="demo-nav">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </aside>
+        
+        <main class="demo-main">
+            <div class="demo-card">
+                <h3>Main Content</h3>
+                <p>This layout adapts to different screen sizes. The sidebar moves below the main content on mobile devices.</p>
+            </div>
+            <div class="demo-card">
+                <h4>Responsive Features</h4>
+                <ul>
+                    <li>Grid layout changes based on screen size</li>
+                    <li>Navigation becomes horizontal on mobile</li>
+                    <li>Colors change to indicate different breakpoints</li>
+                    <li>Padding adjusts for smaller screens</li>
+                </ul>
+            </div>
+        </main>
+        
+        <footer class="demo-footer">
+            Responsive Footer
+        </footer>
+    </div>
+</body>
+</html>

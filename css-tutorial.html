@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Tutorial - CodeCrafters Academy</title>
+    <meta name="description" content="Master modern CSS with Grid, Flexbox, animations, and responsive design techniques.">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="pages.css">
+    <link rel="stylesheet" href="tutorial.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iOCIgZmlsbD0iIzI1NjNFQiIvPgo8cGF0aCBkPSJNOCAxMkgxNk0xNiAxMkgyNE04IDE2SDE2TTE2IDE2SDI0TTggMjBIMTZNMTYgMjBIMjQiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+Cjwvc3ZnPgo=">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <a href="index.html" class="nav-logo">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <rect width="32" height="32" rx="8" fill="#2563EB"/>
+                        <path d="M8 12H16M16 12H24M8 16H16M16 16H24M8 20H16M16 20H24" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    CodeCrafters Academy
+                </a>
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-dropdown">
+                        <a href="tutorials.html" class="nav-link active">Tutorials</a>
+                        <ul class="nav-dropdown-menu">
+                            <li><a href="html-tutorial.html">HTML</a></li>
+                            <li><a href="css-tutorial.html">CSS</a></li>
+                            <li><a href="javascript-tutorial.html">JavaScript</a></li>
+                            <li><a href="responsive-design.html">Responsive Design</a></li>
+                            <li><a href="accessibility.html">Web Accessibility</a></li>
+                            <li><a href="best-practices.html">Performance & SEO</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="tutorial-main">
+        <aside class="tutorial-sidebar">
+            <nav class="tutorial-nav">
+                <h3>CSS Tutorial</h3>
+                <ul class="tutorial-menu">
+                    <li><a href="#css-basics" class="tutorial-link active">CSS Basics</a></li>
+                    <li><a href="#flexbox" class="tutorial-link">Flexbox</a></li>
+                    <li><a href="#grid" class="tutorial-link">CSS Grid</a></li>
+                    <li><a href="#animations" class="tutorial-link">Animations</a></li>
+                    <li><a href="#responsive" class="tutorial-link">Responsive Design</a></li>
+                    <li><a href="#variables" class="tutorial-link">CSS Variables</a></li>
+                </ul>
+            </nav>
+            
+            <div class="tutorial-progress">
+                <h4>Progress</h4>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 0%"></div>
+                </div>
+                <span class="progress-text">0% Complete</span>
+            </div>
+        </aside>
+
+        <div class="tutorial-content">
+            <div class="container">
+                <header class="tutorial-header">
+                    <div class="tutorial-breadcrumb">
+                        <a href="tutorials.html">Tutorials</a> / <span>CSS & Modern Styling</span>
+                    </div>
+                    <h1>Modern CSS & Styling</h1>
+                    <div class="tutorial-meta">
+                        <span class="tutorial-level intermediate">Intermediate</span>
+                        <span class="tutorial-duration">4 hours</span>
+                        <span class="tutorial-updated">Updated: January 2025</span>
+                    </div>
+                </header>
+
+                <section id="css-basics" class="tutorial-section">
+                    <h2>CSS Fundamentals</h2>
+                    <p>CSS (Cascading Style Sheets) controls the visual presentation of HTML elements. Modern CSS includes powerful features like Grid, Flexbox, custom properties, and animations.</p>
+                    <div class="code-example">
+            <div class="code-header">
+                <h3><i class="fas fa-cube"></i> Box Model Visualization</h3>
+            </div>
+            
+            <div class="code-content">
+                <div class="box-model-demo">
+                    <div class="demo-box">
+                        <div class="content">Content</div>
+                        <div class="padding"></div>
+                        <div class="border"></div>
+                        <div class="margin"></div>
+                        
+                        <div class="demo-label label-content">content</div>
+                        <div class="demo-label label-padding">padding</div>
+                        <div class="demo-label label-border">border</div>
+                        <div class="demo-label label-margin">margin</div>
+                    </div>
+                </div>
+                
+                <div class="code-display">
+                    <pre><code><span class="hl-prop">.demo-box</span> {
+    <span class="hl-prop">width</span>: <span class="hl-value">200</span><span class="hl-unit">px</span>;
+    <span class="hl-prop">height</span>: <span class="hl-value">100</span><span class="hl-unit">px</span>;
+    <span class="hl-prop">padding</span>: <span class="hl-value">20</span><span class="hl-unit">px</span>;
+    <span class="hl-prop">border</span>: <span class="hl-value">5</span><span class="hl-unit">px</span> <span class="hl-value">solid</span> <span class="hl-unit">#3b82f6</span>;
+    <span class="hl-prop">margin</span>: <span class="hl-value">30</span><span class="hl-unit">px</span>;
+    <span class="hl-prop">background-color</span>: <span class="hl-unit">#dbeafe</span>;
+}</code></pre>
+                    <button class="copy-btn" data-code=".demo-box {
+    width: 249px;
+    height: 137px;
+    padding: 20px;
+    border: 18px solid #3b82f6;
+    margin: 30px;
+    background-color: #dbeafe;
+}">
+                        <i class="far fa-copy"></i> Copy Code
+                    </button>
+                </div>
+            </div>
+            
+            <div class="controls">
+                <div class="control-group">
+                    <label><i class="fas fa-arrows-alt-h"></i> Width</label>
+                    <div class="slider-container">
+                        <input type="range" id="width-slider" min="100" max="300" value="200">
+                        <span id="width-value">200px</span>
+                    </div>
+                </div>
+                
+                <div class="control-group">
+                    <label><i class="fas fa-arrows-alt-v"></i> Height</label>
+                    <div class="slider-container">
+                        <input type="range" id="height-slider" min="50" max="200" value="100">
+                        <span id="height-value">100px</span>
+                    </div>
+                </div>
+                
+                <div class="control-group">
+                    <label><i class="fas fa-expand"></i> Padding</label>
+                    <div class="slider-container">
+                        <input type="range" id="padding-slider" min="0" max="50" value="20">
+                        <span id="padding-value">20px</span>
+                    </div>
+                </div>
+                
+                <div class="control-group">
+                    <label><i class="fas fa-border-style"></i> Border</label>
+                    <div class="slider-container">
+                        <input type="range" id="border-slider" min="0" max="20" value="5">
+                        <span id="border-value">5px</span>
+                    </div>
+                </div>
+                
+                <div class="control-group">
+                    <label><i class="fas fa-arrows-alt"></i> Margin</label>
+                    <div class="slider-container">
+                        <input type="range" id="margin-slider" min="0" max="60" value="30">
+                        <span id="margin-value">30px</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="legend">
+                <div class="legend-item">
+                    <div class="legend-color legend-content"></div>
+                    <span>Content</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color legend-padding"></div>
+                    <span>Padding</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color legend-border"></div>
+                    <span>Border</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color legend-margin"></div>
+                    <span>Margin</span>
+                </div>
+            </div>
+        </div>
+    </div>
+     <style>
+        :root {
+            --primary: #4361ee;
+            --primary-light: #4895ef;
+            --success: #4cc9f0;
+            --danger: #f72585;
+            --warning: #f8961e;
+            --dark: #1a1a1a;
+            --light: #f8f9fa;
+            --gray: #6c757d;
+            --radius: 0.5rem;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --transition: all 0.3s ease;
+        }
+
+
+        .code-example {
+            margin: 2rem 0;
+            background: var(--dark);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .code-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem;
+            background: rgba(0, 0, 0, 0.2);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .code-header h3 {
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .code-header h3 i {
+            color: var(--primary-light);
+        }
+
+        .code-content {
+            padding: 1.5rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .code-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .box-model-demo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: var(--radius);
+        }
+
+        .demo-box {
+            position: relative;
+            width: 200px;
+            height: 100px;
+            padding: 20px;
+            border: 5px solid #3b82f6;
+            margin: 30px;
+            background-color: #dbeafe;
+            transition: var(--transition);
+        }
+
+        .demo-box .content {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--primary);
+            color: white;
+            font-weight: bold;
+        }
+
+        .demo-box .padding {
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            right: -20px;
+            bottom: -20px;
+            background: rgba(76, 201, 240, 0.3);
+            border: 1px dashed var(--success);
+            pointer-events: none;
+            transition: var(--transition);
+        }
+
+        .demo-box .border {
+            position: absolute;
+            top: -25px;
+            left: -25px;
+            right: -25px;
+            bottom: -25px;
+            background: rgba(247, 37, 133, 0.2);
+            border: 1px dashed var(--danger);
+            pointer-events: none;
+            transition: var(--transition);
+        }
+
+        .demo-box .margin {
+            position: absolute;
+            top: -55px;
+            left: -55px;
+            right: -55px;
+            bottom: -55px;
+            background: rgba(248, 150, 30, 0.2);
+            border: 1px dashed var(--warning);
+            pointer-events: none;
+            transition: var(--transition);
+        }
+
+        .demo-label {
+            position: absolute;
+            font-size: 0.7rem;
+            font-weight: bold;
+            padding: 2px 5px;
+            border-radius: 3px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+        }
+
+        .label-content {
+            bottom: calc(100% + 5px);
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary);
+        }
+
+        .label-padding {
+            top: -15px;
+            left: -15px;
+            background: var(--success);
+        }
+
+        .label-border {
+            top: -30px;
+            left: -30px;
+            background: var(--danger);
+        }
+
+        .label-margin {
+            top: -60px;
+            left: -60px;
+            background: var(--warning);
+        }
+
+        .code-display {
+            background: #1e1e1e;
+            border-radius: var(--radius);
+            padding: 1rem;
+            overflow: auto;
+            position: relative;
+        }
+
+        pre {
+            margin: 0;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        code {
+            color: #e5e5e5;
+        }
+
+        .hl-prop { color: #9cdcfe; }
+        .hl-value { color: #ce9178; }
+        .hl-unit { color: #b5cea8; }
+        .hl-comment { color: #6a9955; }
+
+        .copy-btn:hover {
+            background: var(--primary-light);
+        }
+
+        .copy-btn.copied {
+            background: var(--success);
+        }
+
+        .controls {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            padding: 1.5rem;
+            background: rgba(0, 0, 0, 0.2);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .control-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .control-group label {
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .control-group label i {
+            color: var(--primary-light);
+        }
+
+        .slider-container {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .slider-container span {
+            min-width: 40px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        input[type="range"] {
+            flex: 1;
+            height: 5px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            outline: none;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--primary);
+            cursor: pointer;
+        }
+
+        .legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            padding: 1rem;
+            background: rgba(0, 0, 0, 0.1);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .legend-color {
+            width: 15px;
+            height: 15px;
+            border-radius: 3px;
+        }
+
+        .legend-content { background: var(--primary); }
+        .legend-padding { background: rgba(76, 201, 240, 0.5); }
+        .legend-border { background: rgba(247, 37, 133, 0.5); }
+        .legend-margin { background: rgba(248, 150, 30, 0.5); }
+
+        footer {
+            margin-top: 2rem;
+            text-align: center;
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const copyButtons = document.querySelectorAll('.copy-btn');
+            const demoBox = document.querySelector('.demo-box');
+            const codeElement = document.querySelector('.code-display code');
+            
+            // Copy button functionality
+            copyButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const code = this.getAttribute('data-code');
+                    navigator.clipboard.writeText(code).then(() => {
+                        const originalText = this.innerHTML;
+                        this.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                        this.classList.add('copied');
+                        
+                        setTimeout(() => {
+                            this.innerHTML = originalText;
+                            this.classList.remove('copied');
+                        }, 2000);
+                    }).catch(err => {
+                        console.error('Failed to copy: ', err);
+                    });
+                });
+            });
+            
+            // Slider functionality
+            const widthSlider = document.getElementById('width-slider');
+            const heightSlider = document.getElementById('height-slider');
+            const paddingSlider = document.getElementById('padding-slider');
+            const borderSlider = document.getElementById('border-slider');
+            const marginSlider = document.getElementById('margin-slider');
+            
+            const widthValue = document.getElementById('width-value');
+            const heightValue = document.getElementById('height-value');
+            const paddingValue = document.getElementById('padding-value');
+            const borderValue = document.getElementById('border-value');
+            const marginValue = document.getElementById('margin-value');
+            
+            function updateBoxModel() {
+                const width = widthSlider.value;
+                const height = heightSlider.value;
+                const padding = paddingSlider.value;
+                const border = borderSlider.value;
+                const margin = marginSlider.value;
+                
+                // Update demo box
+                demoBox.style.width = `${width}px`;
+                demoBox.style.height = `${height}px`;
+                demoBox.style.padding = `${padding}px`;
+                demoBox.style.borderWidth = `${border}px`;
+                demoBox.style.margin = `${margin}px`;
+                
+                // Update labels
+                widthValue.textContent = `${width}px`;
+                heightValue.textContent = `${height}px`;
+                paddingValue.textContent = `${padding}px`;
+                borderValue.textContent = `${border}px`;
+                marginValue.textContent = `${margin}px`;
+                
+                // Update visualization layers
+                demoBox.querySelector('.padding').style.top = `-${padding}px`;
+                demoBox.querySelector('.padding').style.left = `-${padding}px`;
+                demoBox.querySelector('.padding').style.right = `-${padding}px`;
+                demoBox.querySelector('.padding').style.bottom = `-${padding}px`;
+                
+                demoBox.querySelector('.border').style.top = `-${parseInt(padding) + parseInt(border)}px`;
+                demoBox.querySelector('.border').style.left = `-${parseInt(padding) + parseInt(border)}px`;
+                demoBox.querySelector('.border').style.right = `-${parseInt(padding) + parseInt(border)}px`;
+                demoBox.querySelector('.border').style.bottom = `-${parseInt(padding) + parseInt(border)}px`;
+                
+                demoBox.querySelector('.margin').style.top = `-${parseInt(padding) + parseInt(border) + parseInt(margin)}px`;
+                demoBox.querySelector('.margin').style.left = `-${parseInt(padding) + parseInt(border) + parseInt(margin)}px`;
+                demoBox.querySelector('.margin').style.right = `-${parseInt(padding) + parseInt(border) + parseInt(margin)}px`;
+                demoBox.querySelector('.margin').style.bottom = `-${parseInt(padding) + parseInt(border) + parseInt(margin)}px`;
+                
+                // Update label positions
+                demoBox.querySelector('.label-padding').style.top = `-${padding/2}px`;
+                demoBox.querySelector('.label-padding').style.left = `-${padding/2}px`;
+                
+                demoBox.querySelector('.label-border').style.top = `-${parseInt(padding) + parseInt(border)/2}px`;
+                demoBox.querySelector('.label-border').style.left = `-${parseInt(padding) + parseInt(border)/2}px`;
+                
+                demoBox.querySelector('.label-margin').style.top = `-${parseInt(padding) + parseInt(border) + parseInt(margin)/2}px`;
+                demoBox.querySelector('.label-margin').style.left = `-${parseInt(padding) + parseInt(border) + parseInt(margin)/2}px`;
+                
+                // Update code display
+                codeElement.innerHTML = `<span class="hl-prop">.demo-box</span> {
+    <span class="hl-prop">width</span>: <span class="hl-value">${width}</span><span class="hl-unit">px</span>;
+    <span class="hl-prop">height</span>: <span class="hl-value">${height}</span><span class="hl-unit">px</span>;
+    <span class="hl-prop">padding</span>: <span class="hl-value">${padding}</span><span class="hl-unit">px</span>;
+    <span class="hl-prop">border</span>: <span class="hl-value">${border}</span><span class="hl-unit">px</span> <span class="hl-value">solid</span> <span class="hl-unit">#3b82f6</span>;
+    <span class="hl-prop">margin</span>: <span class="hl-value">${margin}</span><span class="hl-unit">px</span>;
+    <span class="hl-prop">background-color</span>: <span class="hl-unit">#dbeafe</span>;
+}`;
+                
+                // Update copy button data
+                document.querySelector('.copy-btn').setAttribute('data-code', `.demo-box {
+    width: ${width}px;
+    height: ${height}px;
+    padding: ${padding}px;
+    border: ${border}px solid #3b82f6;
+    margin: ${margin}px;
+    background-color: #dbeafe;
+}`);
+            }
+            
+            // Add event listeners to sliders
+            widthSlider.addEventListener('input', updateBoxModel);
+            heightSlider.addEventListener('input', updateBoxModel);
+            paddingSlider.addEventListener('input', updateBoxModel);
+            borderSlider.addEventListener('input', updateBoxModel);
+            marginSlider.addEventListener('input', updateBoxModel);
+        });
+    </script>
+                </section>
+
+                <section id="flexbox" class="tutorial-section">
+                    <h2>Flexbox Layout</h2>
+                    <p>Flexbox provides an efficient way to arrange and distribute space among items in a container, even when their size is unknown or dynamic.</p>
+                    
+                    <div class="flexbox-demo">
+                        <h3>Interactive Flexbox Demo</h3>
+                        <div class="demo-controls">
+                            <div class="control-group">
+                                <label for="justify-content">justify-content:</label>
+                                <select id="justify-content">
+                                    <option value="flex-start">flex-start</option>
+                                    <option value="center" selected>center</option>
+                                    <option value="flex-end">flex-end</option>
+                                    <option value="space-between">space-between</option>
+                                    <option value="space-around">space-around</option>
+                                    <option value="space-evenly">space-evenly</option>
+                                </select>
+                            </div>
+                            <div class="control-group">
+                                <label for="align-items">align-items:</label>
+                                <select id="align-items">
+                                    <option value="flex-start">flex-start</option>
+                                    <option value="center" selected>center</option>
+                                    <option value="flex-end">flex-end</option>
+                                    <option value="stretch">stretch</option>
+                                    <option value="baseline">baseline</option>
+                                </select>
+                            </div>
+                            <div class="control-group">
+                                <label for="flex-direction">flex-direction:</label>
+                                <select id="flex-direction">
+                                    <option value="row" selected>row</option>
+                                    <option value="column">column</option>
+                                    <option value="row-reverse">row-reverse</option>
+                                    <option value="column-reverse">column-reverse</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="flexbox-container" id="flexboxDemo">
+                            <div class="flex-item">1</div>
+                            <div class="flex-item">2</div>
+                            <div class="flex-item">3</div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="grid" class="tutorial-section">
+                    <h2>CSS Grid Layout</h2>
+                    <p>CSS Grid is a powerful 2-dimensional layout system that allows you to create complex layouts with rows and columns.</p>
+                    
+                    <div class="grid-demo">
+                        <h3>CSS Grid Example</h3>
+                        <div class="css-grid-container">
+                            <div class="grid-item header">Header</div>
+                            <div class="grid-item sidebar">Sidebar</div>
+                            <div class="grid-item main">Main Content</div>
+                            <div class="grid-item footer">Footer</div>
+                        </div>
+                        
+                        <div class="code-example">
+                            <pre><code>.css-grid-container {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+        "header header"
+        "sidebar main"
+        "footer footer";
+    gap: 1rem;
+    height: 300px;
+    
+}</code></pre>
+
+                            <button class="copy-btn" data-code=".css-grid-container {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+        &quot;header header&quot;
+        &quot;sidebar main&quot;
+        &quot;footer footer&quot;
+    gap: 1rem;
+    height: 300px;
+    
+}">Copy Code</button>
+                    </div>
+                    </div>
+                </section>
+
+                <section id="animations" class="tutorial-section">
+                    <h2>CSS Animations & Transitions</h2>
+                    <p>Create engaging user experiences with smooth transitions and keyframe animations.</p>
+                    
+                    <div class="animation-demo">
+                        <h3>Animation Examples</h3>
+                        <div class="animation-examples">
+                            <div class="animation-card hover-scale">
+                                <p>Hover Scale</p>
+                            </div>
+                            <div class="animation-card rotate-animation">
+                                <p>Rotation</p>
+                            </div>
+                            <div class="animation-card pulse-animation">
+                                <p>Pulse Effect</p>
+                            </div>
+                            <div class="animation-card slide-animation">
+                                <p>Slide In</p>
+                            </div>
+                        </div>
+                        
+                        <button class="demo-trigger" onclick="triggerAnimations()">Trigger Animations</button>
+                    </div>
+                </section>
+
+                <section id="responsive" class="tutorial-section">
+                    <h2>Responsive Design Principles</h2>
+                    <p>Learn how to create websites that adapt to different screen sizes and devices using media queries and flexible layouts.</p>
+                    
+                    <div class="responsive-demo">
+                        <h3>Media Query Breakpoints</h3>
+                        <div class="breakpoint-visualization">
+                            <div class="breakpoint mobile">Mobile<br><small>&lt; 768px</small></div>
+                            <div class="breakpoint tablet">Tablet<br><small>768px - 1024px</small></div>
+                            <div class="breakpoint desktop">Desktop<br><small>&gt; 1024px</small></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="variables" class="tutorial-section">
+                    <h2>CSS Custom Properties (Variables)</h2>
+                    <p>CSS variables allow you to store and reuse values throughout your stylesheets, making your code more maintainable and dynamic.</p>
+                    
+                    <div class="variables-demo">
+                        <h3>Color Theme Switcher</h3>
+                        <div class="theme-controls">
+                            <button class="theme-btn" onclick="setTheme('light')">Light Theme</button>
+                            <button class="theme-btn" onclick="setTheme('dark')">Dark Theme</button>
+                            <button class="theme-btn" onclick="setTheme('blue')">Blue Theme</button>
+                        </div>
+                        
+                        <div class="theme-preview" id="themePreview">
+                            <div class="preview-header">Header</div>
+                            <div class="preview-content">
+                                <h4>Sample Content</h4>
+                                <p>This demonstrates how CSS variables can be used to create dynamic themes.</p>
+                                <button class="preview-button">Sample Button</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <nav class="tutorial-navigation">
+                    <a href="html-tutorial.html" class="nav-btn nav-prev">
+                        <span>← Previous: HTML Tutorial</span>
+                    </a>
+                    <a href="javascript-tutorial.html" class="nav-btn nav-next">
+                        <span>Next: JavaScript Tutorial →</span>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>CodeCrafters Academy</h3>
+                    <p>Empowering developers with comprehensive web development education.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="tutorials.html">Tutorials</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CodeCrafters Academy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="tutorial-navigation.js"></script>
+    <script src="css-demos.js"></script>
+</body>
+</html>

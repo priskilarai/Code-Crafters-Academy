@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Accessibility Tutorial - CodeCrafters Academy</title>
+    <meta name="description" content="Learn how to build accessible websites that work for everyone, including users with disabilities.">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="pages.css">
+    <link rel="stylesheet" href="tutorial.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <a href="index.html" class="nav-logo">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <rect width="32" height="32" rx="8" fill="#2563EB"/>
+                        <path d="M8 12H16M16 12H24M8 16H16M16 16H24M8 20H16M16 20H24" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    CodeCrafters Academy
+                </a>
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-dropdown">
+                        <a href="tutorials.html" class="nav-link active">Tutorials</a>
+                        <ul class="nav-dropdown-menu">
+                            <li><a href="html-tutorial.html">HTML</a></li>
+                            <li><a href="css-tutorial.html">CSS</a></li>
+                            <li><a href="javascript-tutorial.html">JavaScript</a></li>
+                            <li><a href="responsive-design.html">Responsive Design</a></li>
+                            <li><a href="accessibility.html">Web Accessibility</a></li>
+                            <li><a href="best-practices.html">Performance & SEO</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="tutorial-main">
+        <aside class="tutorial-sidebar">
+            <nav class="tutorial-nav">
+                <h3>Accessibility</h3>
+                <ul class="tutorial-menu">
+                    <li><a href="#introduction" class="tutorial-link active">Introduction</a></li>
+                    <li><a href="#wcag" class="tutorial-link">WCAG Guidelines</a></li>
+                    <li><a href="#semantic-html" class="tutorial-link">Semantic HTML</a></li>
+                    <li><a href="#aria" class="tutorial-link">ARIA Attributes</a></li>
+                    <li><a href="#keyboard" class="tutorial-link">Keyboard Navigation</a></li>
+                    <li><a href="#testing" class="tutorial-link">Testing Tools</a></li>
+                </ul>
+            </nav>
+            
+            <div class="tutorial-progress">
+                <h4>Progress</h4>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 0%"></div>
+                </div>
+                <span class="progress-text">0% Complete</span>
+            </div>
+        </aside>
+
+        <div class="tutorial-content">
+            <div class="container">
+                <header class="tutorial-header">
+                    <div class="tutorial-breadcrumb">
+                        <a href="tutorials.html">Tutorials</a> / <span>Web Accessibility</span>
+                    </div>
+                    <h1>Web Accessibility</h1>
+                    <div class="tutorial-meta">
+                        <span class="tutorial-level intermediate">Intermediate</span>
+                        <span class="tutorial-duration">3 hours</span>
+                        <span class="tutorial-updated">Updated: January 2025</span>
+                    </div>
+                </header>
+
+                <section id="introduction" class="tutorial-section">
+                    <h2>Why Accessibility Matters</h2>
+                    <p>Web accessibility ensures that websites and applications are usable by people with disabilities. This includes users who are blind, deaf, have motor difficulties, or cognitive impairments.</p>
+                    
+                    <div class="accessibility-stats">
+                        <h3>Accessibility by the Numbers</h3>
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <span class="stat-number">1.3B</span>
+                                <span class="stat-label">People with disabilities worldwide</span>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-number">15%</span>
+                                <span class="stat-label">Of global population</span>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-number">$13T</span>
+                                <span class="stat-label">Annual disposable income</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="wcag" class="tutorial-section">
+                    <h2>WCAG Guidelines</h2>
+                    <p>The Web Content Accessibility Guidelines (WCAG) provide a framework for making web content accessible. They are organized around four principles: Perceivable, Operable, Understandable, and Robust (POUR).</p>
+                    
+                    <div class="wcag-principles">
+                        <div class="principle-grid">
+                            <article class="principle-card">
+                                <div class="principle-icon">👁️</div>
+                                <h3>Perceivable</h3>
+                                <p>Information must be presentable in ways users can perceive</p>
+                                <ul>
+                                    <li>Text alternatives for images</li>
+                                    <li>Captions for videos</li>
+                                    <li>Sufficient color contrast</li>
+                                    <li>Resizable text</li>
+                                </ul>
+                            </article>
+                            
+                            <article class="principle-card">
+                                <div class="principle-icon">⌨️</div>
+                                <h3>Operable</h3>
+                                <p>Interface components must be operable by all users</p>
+                                <ul>
+                                    <li>Keyboard accessible</li>
+                                    <li>No seizure-inducing content</li>
+                                    <li>Sufficient time limits</li>
+                                    <li>Clear navigation</li>
+                                </ul>
+                            </article>
+                            
+                            <article class="principle-card">
+                                <div class="principle-icon">🧠</div>
+                                <h3>Understandable</h3>
+                                <p>Information and UI operation must be understandable</p>
+                                <ul>
+                                    <li>Readable text</li>
+                                    <li>Predictable functionality</li>
+                                    <li>Input assistance</li>
+                                    <li>Error identification</li>
+                                </ul>
+                            </article>
+                            
+                            <article class="principle-card">
+                                <div class="principle-icon">🔧</div>
+                                <h3>Robust</h3>
+                                <p>Content must be robust enough for various assistive technologies</p>
+                                <ul>
+                                    <li>Valid HTML</li>
+                                    <li>Compatible with screen readers</li>
+                                    <li>Future-proof markup</li>
+                                    <li>Semantic structure</li>
+                                </ul>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="semantic-html" class="tutorial-section">
+                    <h2>Semantic HTML for Accessibility</h2>
+                    <p>Using proper HTML elements provides meaning and structure that assistive technologies can understand and navigate.</p>
+                    
+                    <div class="semantic-comparison">
+                        <h3>Good vs Bad Examples</h3>
+                        <div class="comparison-examples">
+                            <div class="example-bad">
+                                <h4>❌ Non-semantic HTML</h4>
+                                <div class="code-example">
+                                    <pre><code>&lt;div class="button" onclick="submit()"&gt;Submit&lt;/div&gt;
+&lt;div class="heading"&gt;Page Title&lt;/div&gt;
+&lt;div class="nav"&gt;
+    &lt;div&gt;Home&lt;/div&gt;
+    &lt;div&gt;About&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                                <p class="example-note">Screen readers can't understand the purpose of these elements.</p>
+                            </div>
+                            
+                            <div class="example-good">
+                                <h4>✅ Semantic HTML</h4>
+                                <div class="code-example">
+                                    <pre><code>&lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;h1&gt;Page Title&lt;/h1&gt;
+&lt;nav&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="/about"&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+                                </div>
+                                <p class="example-note">Clear semantic meaning for assistive technologies.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="aria" class="tutorial-section">
+                    <h2>ARIA Attributes</h2>
+                    <p>ARIA (Accessible Rich Internet Applications) attributes provide additional semantic information when HTML alone isn't sufficient.</p>
+                    
+                    <div class="aria-demo">
+                        <h3>Interactive ARIA Examples</h3>
+                        
+                        <div class="aria-examples">
+                            <div class="aria-example">
+                                <h4>Accordion with ARIA</h4>
+                                <div class="accessible-accordion">
+                                    <button class="accordion-trigger" 
+                                            aria-expanded="false" 
+                                            aria-controls="panel1"
+                                            id="trigger1">
+                                        What is web accessibility?
+                                    </button>
+                                    <div class="accordion-panel" 
+                                         id="panel1" 
+                                         aria-labelledby="trigger1"
+                                         hidden>
+                                        <p>Web accessibility means that websites, tools, and technologies are designed so that people with disabilities can use them effectively.</p>
+                                    </div>
+                                    
+                                    <button class="accordion-trigger" 
+                                            aria-expanded="false" 
+                                            aria-controls="panel2"
+                                            id="trigger2">
+                                        Why is it important?
+                                    </button>
+                                    <div class="accordion-panel" 
+                                         id="panel2" 
+                                         aria-labelledby="trigger2"
+                                         hidden>
+                                        <p>Accessibility ensures equal access to information and functionality for all users, improves SEO, and is often legally required.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="aria-example">
+                                <h4>Live Region Demo</h4>
+                                <div class="live-region-demo">
+                                    <button onclick="updateLiveRegion()" class="btn btn-primary">Update Status</button>
+                                    <div class="live-region" 
+                                         aria-live="polite" 
+                                         aria-label="Status updates"
+                                         id="statusRegion">
+                                        Status: Ready
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="keyboard" class="tutorial-section">
+                    <h2>Keyboard Navigation</h2>
+                    <p>Ensure all interactive elements are accessible via keyboard navigation for users who cannot use a mouse.</p>
+                    
+                    <div class="keyboard-demo">
+                        <h3>Keyboard Navigation Test</h3>
+                        <div class="keyboard-test-area">
+                            <p>Try navigating through these elements using only your keyboard (Tab, Shift+Tab, Enter, Space):</p>
+                            
+                            <div class="keyboard-elements">
+                                <button class="keyboard-btn">Button 1</button>
+                                <a href="#" class="keyboard-link">Link Example</a>
+                                <input type="text" placeholder="Text input" class="keyboard-input">
+                                <select class="keyboard-select">
+                                    <option>Option 1</option>
+                                    <option>Option 2</option>
+                                </select>
+                                <div class="custom-button" 
+                                     tabindex="0" 
+                                     role="button" 
+                                     aria-label="Custom button"
+                                     onkeydown="handleCustomButtonKeydown(event)"
+                                     onclick="handleCustomButtonClick()">
+                                    Custom Button
+                                </div>
+                            </div>
+                            
+                            <div class="focus-indicator" id="focusIndicator">
+                                Focus indicator will appear here
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="testing" class="tutorial-section">
+                    <h2>Accessibility Testing Tools</h2>
+                    <p>Learn about tools and techniques for testing the accessibility of your websites.</p>
+                    
+                    <div class="testing-tools">
+                        <h3>Recommended Testing Tools</h3>
+                        <div class="tools-grid">
+                            <article class="tool-card">
+                                <h4>Browser DevTools</h4>
+                                <p>Built-in accessibility auditing in Chrome, Firefox, and Edge developer tools.</p>
+                                <div class="tool-features">
+                                    <span class="feature">Lighthouse audits</span>
+                                    <span class="feature">Accessibility tree</span>
+                                    <span class="feature">Color contrast checker</span>
+                                </div>
+                            </article>
+                            
+                            <article class="tool-card">
+                                <h4>Screen Reader Testing</h4>
+                                <p>Test with actual screen readers to understand the user experience.</p>
+                                <div class="tool-features">
+                                    <span class="feature">NVDA (Windows)</span>
+                                    <span class="feature">VoiceOver (macOS)</span>
+                                    <span class="feature">JAWS (Windows)</span>
+                                </div>
+                            </article>
+                            
+                            <article class="tool-card">
+                                <h4>Automated Testing</h4>
+                                <p>Integrate accessibility testing into your development workflow.</p>
+                                <div class="tool-features">
+                                    <span class="feature">axe-core</span>
+                                    <span class="feature">Pa11y</span>
+                                    <span class="feature">Lighthouse CI</span>
+                                </div>
+                            </article>
+                        </div>
+                        
+                        <div class="accessibility-audit">
+                            <h4>Quick Accessibility Audit</h4>
+                            <button onclick="runAccessibilityAudit()" class="btn btn-primary">Run Audit</button>
+                            <div class="audit-results" id="auditResults">
+                                <p>Click the button above to run a basic accessibility audit of this page.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <nav class="tutorial-navigation">
+                    <a href="responsive-design.html" class="nav-btn nav-prev">
+                        <span>← Previous: Responsive Design</span>
+                    </a>
+                    <a href="best-practices.html" class="nav-btn nav-next">
+                        <span>Next: Best Practices →</span>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>CodeCrafters Academy</h3>
+                    <p>Empowering developers with comprehensive web development education.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="tutorials.html">Tutorials</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CodeCrafters Academy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="tutorial-navigation.js"></script>
+    <script src="accessibility-demos.js"></script>
+</body>
+</html>

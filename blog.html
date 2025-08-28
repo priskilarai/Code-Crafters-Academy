@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - CodeCrafters Academy</title>
+    <meta name="description" content="Stay updated with the latest web development trends, tutorials, and insights from our expert team.">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="pages.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iOCIgZmlsbD0iIzI1NjNFQiIvPgo8cGF0aCBkPSJNOCAxMkgxNk0xNiAxMkgyNE04IDE2SDE2TTE2IDE2SDI0TTggMjBIMTZNMTYgMjBIMjQiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+Cjwvc3ZnPgo=">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <a href="index.html" class="nav-logo">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <rect width="32" height="32" rx="8" fill="#2563EB"/>
+                        <path d="M8 12H16M16 12H24M8 16H16M16 16H24M8 20H16M16 20H24" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    CodeCrafters Academy
+                </a>
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-dropdown">
+                        <a href="tutorials.html" class="nav-link">Tutorials</a>
+                        <ul class="nav-dropdown-menu">
+                            <li><a href="html-tutorial.html">HTML</a></li>
+                            <li><a href="css-tutorial.html">CSS</a></li>
+                            <li><a href="javascript-tutorial.html">JavaScript</a></li>
+                            <li><a href="responsive-design.html">Responsive Design</a></li>
+                            <li><a href="accessibility.html">Web Accessibility</a></li>
+                            <li><a href="best-practices.html">Performance & SEO</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="blog.html" class="nav-link active">Blog</a></li>
+                    <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <h1 class="page-title">Development Blog</h1>
+                <p class="page-description">Insights, tutorials, and the latest trends in web development from our expert team.</p>
+            </div>
+        </section>
+
+        <section class="blog-content">
+            <div class="container">
+                <div class="blog-layout">
+                    <div class="blog-main">
+                        <article class="blog-post featured">
+                            <div class="post-image">
+                                <img src="https://images.pexels.com/photos/11035380/pexels-photo-11035380.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Web development trends 2025">
+                                <div class="post-category">Featured</div>
+                            </div>
+                            <div class="post-content">
+                                <header class="post-header">
+                                    <h2><a href="#" class="post-title-link">Web Development Trends to Watch in 2025</a></h2>
+                                    <div class="post-meta">
+                                        <time datetime="2025-01-15">January 15, 2025</time>
+                                        <span class="post-author">By Sarah Johnson</span>
+                                        <span class="post-reading-time">8 min read</span>
+                                    </div>
+                                </header>
+                                <p class="post-excerpt">Discover the emerging technologies and methodologies that will shape web development in 2025, from AI-powered development tools to new CSS features and JavaScript frameworks.</p>
+                                <div class="post-tags">
+                                    <span class="tag">Trends</span>
+                                    <span class="tag">2025</span>
+                                    <span class="tag">Technology</span>
+                                </div>
+                                <a href="#" class="read-more-btn">Read Full Article</a>
+                            </div>
+                        </article>
+
+                        <div class="blog-grid">
+                            <article class="blog-post">
+                                <div class="post-image">
+                                    <img src="https://images.pexels.com/photos/11035471/pexels-photo-11035471.jpeg?auto=compress&cs=tinysrgb&w=400" alt="CSS Grid mastery">
+                                </div>
+                                <div class="post-content">
+                                    <header class="post-header">
+                                        <h3><a href="#" class="post-title-link">Mastering CSS Grid: Advanced Layout Techniques</a></h3>
+                                        <div class="post-meta">
+                                            <time datetime="2025-01-12">January 12, 2025</time>
+                                            <span class="post-author">By Michael Chen</span>
+                                            <span class="post-reading-time">6 min read</span>
+                                        </div>
+                                    </header>
+                                    <p class="post-excerpt">Learn advanced CSS Grid techniques for creating complex, responsive layouts that adapt beautifully to any screen size.</p>
+                                    <div class="post-tags">
+                                        <span class="tag">CSS</span>
+                                        <span class="tag">Grid</span>
+                                        <span class="tag">Layout</span>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="blog-post">
+                                <div class="post-image">
+                                    <img src="https://images.pexels.com/photos/11035364/pexels-photo-11035364.jpeg?auto=compress&cs=tinysrgb&w=400" alt="JavaScript performance">
+                                </div>
+                                <div class="post-content">
+                                    <header class="post-header">
+                                        <h3><a href="#" class="post-title-link">JavaScript Performance Optimization Tips</a></h3>
+                                        <div class="post-meta">
+                                            <time datetime="2025-01-10">January 10, 2025</time>
+                                            <span class="post-author">By Emily Rodriguez</span>
+                                            <span class="post-reading-time">5 min read</span>
+                                        </div>
+                                    </header>
+                                    <p class="post-excerpt">Discover practical techniques to optimize your JavaScript code for better performance and user experience.</p>
+                                    <div class="post-tags">
+                                        <span class="tag">JavaScript</span>
+                                        <span class="tag">Performance</span>
+                                        <span class="tag">Optimization</span>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="blog-post">
+                                <div class="post-image">
+                                    <img src="https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Web accessibility">
+                                </div>
+                                <div class="post-content">
+                                    <header class="post-header">
+                                        <h3><a href="#" class="post-title-link">Building Accessible Web Applications</a></h3>
+                                        <div class="post-meta">
+                                            <time datetime="2025-01-08">January 8, 2025</time>
+                                            <span class="post-author">By Sarah Johnson</span>
+                                            <span class="post-reading-time">7 min read</span>
+                                        </div>
+                                    </header>
+                                    <p class="post-excerpt">A comprehensive guide to implementing accessibility features that make your web applications usable by everyone.</p>
+                                    <div class="post-tags">
+                                        <span class="tag">Accessibility</span>
+                                        <span class="tag">WCAG</span>
+                                        <span class="tag">Inclusive Design</span>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="blog-post">
+                                <div class="post-image">
+                                    <img src="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Responsive design">
+                                </div>
+                                <div class="post-content">
+                                    <header class="post-header">
+                                        <h3><a href="#" class="post-title-link">Mobile-First Design Principles</a></h3>
+                                        <div class="post-meta">
+                                            <time datetime="2025-01-05">January 5, 2025</time>
+                                            <span class="post-author">By Michael Chen</span>
+                                            <span class="post-reading-time">4 min read</span>
+                                        </div>
+                                    </header>
+                                    <p class="post-excerpt">Learn why mobile-first design is essential and how to implement it effectively in your projects.</p>
+                                    <div class="post-tags">
+                                        <span class="tag">Mobile</span>
+                                        <span class="tag">Responsive</span>
+                                        <span class="tag">Design</span>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="blog-post">
+                                <div class="post-image">
+                                    <img src="https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=400" alt="API integration">
+                                </div>
+                                <div class="post-content">
+                                    <header class="post-header">
+                                        <h3><a href="#" class="post-title-link">RESTful API Integration Best Practices</a></h3>
+                                        <div class="post-meta">
+                                            <time datetime="2025-01-03">January 3, 2025</time>
+                                            <span class="post-author">By Emily Rodriguez</span>
+                                            <span class="post-reading-time">6 min read</span>
+                                        </div>
+                                    </header>
+                                    <p class="post-excerpt">Master the art of API integration with proper error handling, caching strategies, and security considerations.</p>
+                                    <div class="post-tags">
+                                        <span class="tag">API</span>
+                                        <span class="tag">REST</span>
+                                        <span class="tag">Integration</span>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="blog-post">
+                                <div class="post-image">
+                                    <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Version control">
+                                </div>
+                                <div class="post-content">
+                                    <header class="post-header">
+                                        <h3><a href="#" class="post-title-link">Git Workflow for Team Development</a></h3>
+                                        <div class="post-meta">
+                                            <time datetime="2025-01-01">January 1, 2025</time>
+                                            <span class="post-author">By David Kim</span>
+                                            <span class="post-reading-time">5 min read</span>
+                                        </div>
+                                    </header>
+                                    <p class="post-excerpt">Establish effective Git workflows that improve team collaboration and code quality in your development projects.</p>
+                                    <div class="post-tags">
+                                        <span class="tag">Git</span>
+                                        <span class="tag">Workflow</span>
+                                        <span class="tag">Team</span>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="pagination">
+                            <button class="pagination-btn" disabled>← Previous</button>
+                            <span class="pagination-info">Page 1 of 5</span>
+                            <button class="pagination-btn">Next →</button>
+                        </div>
+                    </div>
+
+                    <aside class="blog-sidebar">
+                        <div class="sidebar-widget">
+                            <h3>Search Articles</h3>
+                            <div class="search-widget">
+                                <input type="search" placeholder="Search blog posts..." id="blogSearch">
+                                <button class="search-btn" aria-label="Search">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="11" cy="11" r="8"/>
+                                        <path d="M21 21l-4.35-4.35"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="sidebar-widget">
+                            <h3>Categories</h3>
+                            <ul class="category-list">
+                                <li><a href="#" data-category="tutorials">Tutorials <span>(12)</span></a></li>
+                                <li><a href="#" data-category="tips">Tips & Tricks <span>(8)</span></a></li>
+                                <li><a href="#" data-category="news">Industry News <span>(6)</span></a></li>
+                                <li><a href="#" data-category="reviews">Tool Reviews <span>(4)</span></a></li>
+                                <li><a href="#" data-category="career">Career Advice <span>(5)</span></a></li>
+                            </ul>
+                        </div>
+
+                        <div class="sidebar-widget">
+                            <h3>Popular Posts</h3>
+                            <div class="popular-posts">
+                                <article class="popular-post">
+                                    <div class="popular-post-image">
+                                        <img src="https://images.pexels.com/photos/11035540/pexels-photo-11035540.jpeg?auto=compress&cs=tinysrgb&w=100" alt="CSS Grid tutorial">
+                                    </div>
+                                    <div class="popular-post-content">
+                                        <h4><a href="#">Complete Guide to CSS Grid</a></h4>
+                                        <time>Dec 28, 2024</time>
+                                    </div>
+                                </article>
+                                <article class="popular-post">
+                                    <div class="popular-post-image">
+                                        <img src="https://images.pexels.com/photos/11035364/pexels-photo-11035364.jpeg?auto=compress&cs=tinysrgb&w=100" alt="JavaScript async">
+                                    </div>
+                                    <div class="popular-post-content">
+                                        <h4><a href="#">Async JavaScript Explained</a></h4>
+                                        <time>Dec 25, 2024</time>
+                                    </div>
+                                </article>
+                                <article class="popular-post">
+                                    <div class="popular-post-image">
+                                        <img src="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=100" alt="Responsive design">
+                                    </div>
+                                    <div class="popular-post-content">
+                                        <h4><a href="#">Responsive Design Patterns</a></h4>
+                                        <time>Dec 22, 2024</time>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+
+                        <div class="sidebar-widget">
+                            <h3>Newsletter</h3>
+                            <p>Get weekly updates on new tutorials and web development tips.</p>
+                            <form class="sidebar-newsletter" id="sidebarNewsletter">
+                                <input type="email" placeholder="Your email address" required>
+                                <button type="submit" class="btn btn-primary">Subscribe</button>
+                            </form>
+                        </div>
+
+                        <div class="sidebar-widget">
+                            <h3>Tags</h3>
+                            <div class="tag-cloud">
+                                <a href="#" class="cloud-tag">JavaScript</a>
+                                <a href="#" class="cloud-tag">CSS</a>
+                                <a href="#" class="cloud-tag">HTML</a>
+                                <a href="#" class="cloud-tag">React</a>
+                                <a href="#" class="cloud-tag">Performance</a>
+                                <a href="#" class="cloud-tag">Accessibility</a>
+                                <a href="#" class="cloud-tag">Mobile</a>
+                                <a href="#" class="cloud-tag">API</a>
+                                <a href="#" class="cloud-tag">Security</a>
+                                <a href="#" class="cloud-tag">Testing</a>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>CodeCrafters Academy</h3>
+                    <p>Empowering developers with comprehensive web development education.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="LinkedIn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="tutorials.html">Tutorials</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="tools.html">Tools</a></li>
+                        <li><a href="best-practices.html">Best Practices</a></li>
+                        <li><a href="accessibility.html">Accessibility</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CodeCrafters Academy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="blog.js"></script>
+</body>
+</html>
