@@ -1,37 +1,35 @@
-// Tutorial Navigation and Interactive Features
+// Fixed JavaScript Code
 document.addEventListener('DOMContentLoaded', function() {
-            const copyButtons = document.querySelectorAll('.copy-btn');
+    // Copy button functionality
+    const copyButtons = document.querySelectorAll('.copy-btn');
+    
+    copyButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const code = this.getAttribute('data-code') || 
+                         this.parentElement.nextElementSibling.textContent;
             
-            copyButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    const code = this.getAttribute('data-code');
-                    const textArea = document.createElement('textarea');
-                    textArea.value = code;
-                    document.body.appendChild(textArea);
-                    textArea.select();
-                    
-                    try {
-                        const successful = document.execCommand('copy');
-                        const msg = successful ? 'Copied!' : 'Unable to copy';
-                        
-                        // Update button text temporarily
-                        const originalHtml = this.innerHTML;
-                        this.innerHTML = '<i class="fas fa-check"></i> ' + msg;
-                        this.classList.add('copied');
-                        
-                        setTimeout(() => {
-                            this.innerHTML = originalHtml;
-                            this.classList.remove('copied');
-                        }, 2000);
-                    } catch (err) {
-                        console.error('Failed to copy: ', err);
-                    }
-                    
-                    document.body.removeChild(textArea);
-                });
+            copyToClipboard(code).then(() => {
+                // Visual feedback for successful copy
+                const originalText = this.innerHTML;
+                this.innerHTML = ' Copied!';
+                this.classList.add('copied');
+                
+                setTimeout(() => {
+                    this.innerHTML = originalText;
+                    this.classList.remove('copied');
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+                this.innerHTML = ' Failed';
+                
+                setTimeout(() => {
+                    this.innerHTML = ' Copy Code';
+                }, 2000);
             });
         });
- // Interactive form demo
+    });
+    
+    // Interactive form demo - only if form exists
     const demoForm = document.getElementById('demoForm');
     if (demoForm) {
         demoForm.addEventListener('submit', function(e) {
@@ -53,24 +51,22 @@ document.addEventListener('DOMContentLoaded', function() {
         const colorInput = document.getElementById('demo-color');
         if (colorInput) {
             colorInput.addEventListener('input', function() {
-                const preview = document.createElement('div');
-                preview.style.cssText = `
-                    width: 2rem;
-                    height: 2rem;
-                    background: ${this.value};
-                    border-radius: 0.25rem;
-                    border: 1px solid var(--neutral-300);
-                    margin-top: 0.5rem;
-                `;
+                let preview = this.parentNode.querySelector('.color-preview');
                 
-                // Remove existing preview
-                const existingPreview = this.parentNode.querySelector('.color-preview');
-                if (existingPreview) {
-                    existingPreview.remove();
+                if (!preview) {
+                    preview = document.createElement('div');
+                    preview.className = 'color-preview';
+                    preview.style.cssText = `
+                        width: 2rem;
+                        height: 2rem;
+                        border-radius: 0.25rem;
+                        border: 1px solid var(--neutral-300);
+                        margin-top: 0.5rem;
+                    `;
+                    this.parentNode.appendChild(preview);
                 }
                 
-                preview.className = 'color-preview';
-                this.parentNode.appendChild(preview);
+                preview.style.background = this.value;
             });
         }
     }
@@ -83,9 +79,12 @@ document.addEventListener('DOMContentLoaded', function() {
             let html = block.innerHTML;
             
             // Basic syntax highlighting
-            html = html.replace(/(&lt;[^&]*&gt;)/g, '<span style="color: #e06c75;">$1</span>'); // Tags
-            html = html.replace(/(="[^"]*")/g, '<span style="color: #98c379;">$1</span>'); // Attributes
-            html = html.replace(/(&lt;!DOCTYPE[^&]*&gt;)/g, '<span style="color: #c678dd;">$1</span>'); // Doctype
+            html = html.replace(/(<!DOCTYPE[^&]*>)/g, '$1');
+            html = html.replace(/(<\/?[a-zA-Z0-9\-]+)/g, '$1');
+            html = html.replace(/(>)/g, '$1');
+            html = html.replace(/([a-zA-Z\-]+=)/g, '$1');
+            html = html.replace(/("[^"]*")/g, '$1');
+            html = html.replace(/(<!--[^&]*-->)/g, '$1');
             
             block.innerHTML = html;
         });
@@ -129,96 +128,91 @@ document.addEventListener('DOMContentLoaded', function() {
                 const heading = section.querySelector('h2');
                 if (heading && !heading.hasAttribute('data-collapsible')) {
                     heading.style.cursor = 'pointer';
-                    heading.style.borderBottom = '2px solid var(--primary-600)';
                     heading.setAttribute('data-collapsible', 'true');
                     
-                    const content = section.querySelector('h2 ~ *');
-                    if (content) {
-                        const wrapper = document.createElement('div');
-                        wrapper.className = 'collapsible-content';
-                        
-                        // Move all content after h2 into wrapper
-                        let nextElement = heading.nextElementSibling;
-                        while (nextElement) {
-                            const current = nextElement;
-                            nextElement = nextElement.nextElementSibling;
-                            wrapper.appendChild(current);
-                        }
-                        
-                        section.appendChild(wrapper);
-                        
-                        heading.addEventListener('click', function() {
-                            wrapper.style.display = wrapper.style.display === 'none' ? 'block' : 'none';
-                            
-                            const arrow = heading.querySelector('.collapse-arrow');
-                            if (!arrow) {
-                                const arrowEl = document.createElement('span');
-                                arrowEl.className = 'collapse-arrow';
-                                arrowEl.innerHTML = ' ▼';
-                                arrowEl.style.transition = 'transform 0.2s ease';
-                                heading.appendChild(arrowEl);
-                            } else {
-                                arrow.style.transform = wrapper.style.display === 'none' ? 'rotate(-90deg)' : 'rotate(0deg)';
-                            }
-                        });
+                    // Create wrapper for content
+                    const wrapper = document.createElement('div');
+                    wrapper.className = 'collapsible-content';
+                    
+                    // Move all content after h2 into wrapper
+                    let nextElement = heading.nextElementSibling;
+                    while (nextElement) {
+                        const current = nextElement;
+                        nextElement = nextElement.nextElementSibling;
+                        wrapper.appendChild(current);
                     }
+                    
+                    section.appendChild(wrapper);
+                    
+                    // Add arrow indicator
+                    const arrow = document.createElement('span');
+                    arrow.className = 'collapse-arrow';
+                    arrow.innerHTML = ' ▼';
+                    arrow.style.transition = 'transform 0.2s ease';
+                    heading.appendChild(arrow);
+                    
+                    heading.addEventListener('click', function() {
+                        const isHidden = wrapper.style.display === 'none';
+                        wrapper.style.display = isHidden ? 'block' : 'none';
+                        arrow.style.transform = isHidden ? 'rotate(0deg)' : 'rotate(-90deg)';
+                    });
+                    
+                    // Initially collapse content on mobile
+                    wrapper.style.display = 'none';
+                    arrow.style.transform = 'rotate(-90deg)';
                 }
+            });
+        } else {
+            // Ensure all content is visible on larger screens
+            const wrappers = document.querySelectorAll('.collapsible-content');
+            wrappers.forEach(wrapper => {
+                wrapper.style.display = 'block';
+            });
+            
+            const arrows = document.querySelectorAll('.collapse-arrow');
+            arrows.forEach(arrow => {
+                arrow.style.transform = 'rotate(0deg)';
             });
         }
     }
     
-    // Initialize collapsible sections on mobile
+    // Initialize collapsible sections
     createCollapsibleSections();
     
     // Re-initialize on resize
-    window.addEventListener('resize', function() {
-        // Remove existing collapsible functionality
-        const collapsibleHeadings = document.querySelectorAll('[data-collapsible]');
-        collapsibleHeadings.forEach(heading => {
-            heading.removeAttribute('data-collapsible');
-            heading.style.cursor = '';
-            const arrow = heading.querySelector('.collapse-arrow');
-            if (arrow) arrow.remove();
-        });
-        
-        createCollapsibleSections();
-    });
+    window.addEventListener('resize', createCollapsibleSections);
+});
 
+// Modern clipboard API function
+async function copyToClipboard(text) {
+    try {
+        await navigator.clipboard.writeText(text);
+        return true;
+    } catch (err) {
+        // Fallback for older browsers
+        const textArea = document.createElement('textarea');
+        textArea.value = text;
+        textArea.style.position = 'fixed';
+        textArea.style.opacity = '0';
+        document.body.appendChild(textArea);
+        textArea.select();
+        
+        try {
+            const successful = document.execCommand('copy');
+            document.body.removeChild(textArea);
+            return successful;
+        } catch (fallbackErr) {
+            document.body.removeChild(textArea);
+            throw fallbackErr;
+        }
+    }
+}
 
 // Code example interaction enhancements
 document.addEventListener('DOMContentLoaded', function() {
     const codeExamples = document.querySelectorAll('.code-example');
     
     codeExamples.forEach((example, index) => {
-        // Add line numbers
-        const pre = example.querySelector('pre');
-        if (pre) {
-            const code = pre.querySelector('code');
-            const lines = code.textContent.split('\n');
-            
-            const lineNumbers = document.createElement('div');
-            lineNumbers.className = 'line-numbers';
-            lineNumbers.style.cssText = `
-                position: absolute;
-                left: 0;
-                top: 0;
-                padding: var(--spacing-4);
-                color: var(--neutral-500);
-                font-family: 'Fira Code', monospace;
-                font-size: 0.875rem;
-                line-height: 1.5;
-                border-right: 1px solid var(--neutral-700);
-                background: var(--neutral-800);
-                user-select: none;
-            `;
-            
-            lineNumbers.innerHTML = lines.map((_, i) => i + 1).join('<br>');
-            
-            // Adjust pre padding for line numbers
-            pre.style.paddingLeft = '3rem';
-            example.style.position = 'relative';
-            example.insertBefore(lineNumbers, pre);
-        }
         
         // Add expand/collapse for long code blocks
         if (code.textContent.split('\n').length > 15) {
