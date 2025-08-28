@@ -355,37 +355,61 @@
     line-height: 1.5;
 }
 
-.map-section {
-    padding: var(--spacing-20) var(--spacing-4);
-    background: var(--neutral-50);
-}
+/* Map Section */
+        .custom-map-marker {
+            background: transparent;
+            border: none;
+        }
+        
+        .leaflet-popup-content {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .leaflet-popup-content-wrapper {
+            border-radius: 8px;
+        }
+        .map-section {
+            padding: var(--spacing-20) var(--spacing-4);
+            background: var(--neutral-50);
+        }
 
-.map-placeholder {
-    background: white;
-    border-radius: 1rem;
-    height: 400px;
-    border: 1px solid var(--neutral-200);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
+        .map-placeholder {
+            background: white;
+            border-radius: 1rem;
+            height: 400px;
+            border: 1px solid var(--neutral-200);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
 
-.map-content {
-    color: var(--neutral-500);
-}
+        .map-content {
+            color: var(--neutral-500);
+            z-index: 10;
+            background: rgba(255, 255, 255, 0.9);
+            padding: var(--spacing-6);
+            border-radius: 0.5rem;
+        }
 
-.map-content svg {
-    margin-bottom: var(--spacing-4);
-}
+        .map-content svg {
+            margin-bottom: var(--spacing-4);
+        }
 
-.map-content p {
-    font-size: 1.25rem;
-    font-weight: 500;
-    margin-bottom: var(--spacing-2);
-    color: var(--neutral-600);
-}
+        .map-content p {
+            font-size: 1.25rem;
+            font-weight: 500;
+            margin-bottom: var(--spacing-2);
+            color: var(--neutral-600);
+        }
 
+        #map {
+            height: 100%;
+            width: 100%;
+            border-radius: 1rem;
+            z-index: 1;
+        }
 /* Tutorial Search */
 .tutorial-search {
     position: relative;

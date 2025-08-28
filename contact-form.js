@@ -126,6 +126,46 @@ document.addEventListener('DOMContentLoaded', function() {
             contactForm.reset();
         }, 2000);
     }
+    
+    function showNotification(message, type) {
+        // Create notification element
+        const notification = document.createElement('div');
+        notification.style.cssText = `
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 1rem;
+            border-radius: 8px;
+            color: white;
+            font-weight: 500;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            transform: translateX(100%);
+        `;
+        
+        if (type === 'success') {
+            notification.style.backgroundColor = 'var(--success-500)';
+        } else {
+            notification.style.backgroundColor = 'var(--error-500)';
+        }
+        
+        notification.textContent = message;
+        document.body.appendChild(notification);
+        
+        // Animate in
+        setTimeout(() => {
+            notification.style.transform = 'translateX(0)';
+        }, 100);
+        
+        // Remove after 5 seconds
+        setTimeout(() => {
+            notification.style.transform = 'translateX(100%)';
+            setTimeout(() => {
+                notification.remove();
+            }, 300);
+        }, 5000);
+    }
 });
 
 // Form Enhancement: Auto-save to localStorage
