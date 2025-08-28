@@ -91,27 +91,41 @@
                     <h2>Introduction to HTML5</h2>
                     <p>HTML5 is the latest version of HyperText Markup Language, the standard markup language for creating web pages. It introduces semantic elements, improved forms, multimedia support, and APIs that make web development more powerful and accessible.</p>
                     
-                    <div class="code-example">
-                        <h3>Basic HTML5 Document Structure</h3>
-                        <pre><code>&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    &lt;title&gt;Page Title&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;header&gt;
-        &lt;nav&gt;...&lt;/nav&gt;
-    &lt;/header&gt;
-    &lt;main&gt;
-        &lt;section&gt;...&lt;/section&gt;
-        &lt;article&gt;...&lt;/article&gt;
-    &lt;/main&gt;
-    &lt;footer&gt;...&lt;/footer&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-                        <button class="copy-btn" data-code="&lt;!DOCTYPE html&gt;
+        <div class="code-example">
+            <h3><i class="fas fa-code"></i> Basic HTML5 Document Structure</h3>
+            <pre><code><span class="doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html</span> <span class="attribute">lang=</span><span class="value">"en"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;head&gt;</span>
+    <span class="tag">&lt;meta</span> <span class="attribute">charset=</span><span class="value">"UTF-8"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;meta</span> <span class="attribute">name=</span><span class="value">"viewport"</span> <span class="attribute">content=</span><span class="value">"width=device-width, initial-scale=1.0"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;title&gt;</span>Page Title<span class="tag">&lt;/title&gt;</span>
+    <span class="comment">&lt;!-- Additional meta tags, stylesheets, and scripts go here --&gt;</span>
+<span class="tag">&lt;/head&gt;</span>
+<span class="tag">&lt;body&gt;</span>
+    <span class="tag">&lt;header&gt;</span>
+        <span class="tag">&lt;nav&gt;</span>
+            <span class="comment">&lt;!-- Navigation links --&gt;</span>
+        <span class="tag">&lt;/nav&gt;</span>
+    <span class="tag">&lt;/header&gt;</span>
+    
+    <span class="tag">&lt;main&gt;</span>
+        <span class="tag">&lt;section&gt;</span>
+            <span class="comment">&lt;!-- Section content --&gt;</span>
+        <span class="tag">&lt;/section&gt;</span>
+        
+        <span class="tag">&lt;article&gt;</span>
+            <span class="comment">&lt;!-- Article content --&gt;</span>
+        <span class="tag">&lt;/article&gt;</span>
+    <span class="tag">&lt;/main&gt;</span>
+    
+    <span class="tag">&lt;footer&gt;</span>
+        <span class="comment">&lt;!-- Footer content --&gt;</span>
+    <span class="tag">&lt;/footer&gt;</span>
+    
+    <span class="comment">&lt;!-- JavaScript at the end of body for better performance --&gt;</span>
+<span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span></code></pre>
+            <button class="copy-btn" data-code="&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
     &lt;meta charset=&quot;UTF-8&quot;&gt;
@@ -128,51 +142,10 @@
     &lt;/main&gt;
     &lt;footer&gt;...&lt;/footer&gt;
 &lt;/body&gt;
-&lt;/html&gt;">Copy Code</button>
-                    </div>
-                </section>
-
-                <section id="semantic-elements" class="tutorial-section">
-                    <h2>Semantic HTML5 Elements</h2>
-                    <p>Semantic elements clearly describe their meaning to both the browser and the developer, improving accessibility and SEO.</p>
-                    
-                    <div class="semantic-demo">
-                        <h3>Common Semantic Elements</h3>
-                        <div class="semantic-grid">
-                            <div class="semantic-item">
-                                <code>&lt;header&gt;</code>
-                                <p>Page or section header</p>
-                            </div>
-                            <div class="semantic-item">
-                                <code>&lt;nav&gt;</code>
-                                <p>Navigation links</p>
-                            </div>
-                            <div class="semantic-item">
-                                <code>&lt;main&gt;</code>
-                                <p>Main content area</p>
-                            </div>
-                            <div class="semantic-item">
-                                <code>&lt;section&gt;</code>
-                                <p>Thematic grouping</p>
-                            </div>
-                            <div class="semantic-item">
-                                <code>&lt;article&gt;</code>
-                                <p>Self-contained content</p>
-                            </div>
-                            <div class="semantic-item">
-                                <code>&lt;aside&gt;</code>
-                                <p>Sidebar content</p>
-                            </div>
-                            <div class="semantic-item">
-                                <code>&lt;footer&gt;</code>
-                                <p>Page or section footer</p>
-                            </div>
-                            <div class="semantic-item">
-                                <code>&lt;figure&gt;</code>
-                                <p>Self-contained media</p>
-                            </div>
-                        </div>
-                    </div>
+&lt;/html&gt;">
+                <i class="far fa-copy"></i> Copy Code
+            </button>
+        </div>
                 </section>
 
                 <section id="forms" class="tutorial-section">
@@ -189,7 +162,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="demo-tel">Phone</label>
-                                    <input type="tel" id="demo-tel" placeholder="+1 (555) 123-4567">
+                                <input type="tel" id="demo-tel" placeholder="+1 (555) 123-4567" maxlength="11" minlength="10">
                                 </div>
                             </div>
                             <div class="form-row">

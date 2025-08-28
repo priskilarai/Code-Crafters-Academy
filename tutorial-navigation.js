@@ -1,29 +1,37 @@
 // Tutorial Navigation and Interactive Features
 document.addEventListener('DOMContentLoaded', function() {
-    // Copy code functionality
-    const copyButtons = document.querySelectorAll('.copy-btn');
-    
-    copyButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const code = this.getAttribute('data-code');
+            const copyButtons = document.querySelectorAll('.copy-btn');
             
-            navigator.clipboard.writeText(code).then(() => {
-                const originalText = this.textContent;
-                this.textContent = 'Copied!';
-                this.style.background = 'var(--accent-600)';
-                
-                setTimeout(() => {
-                    this.textContent = originalText;
-                    this.style.background = '';
-                }, 2000);
-            }).catch(err => {
-                console.error('Failed to copy code: ', err);
-                showNotification('Failed to copy code to clipboard', 'error');
+            copyButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const code = this.getAttribute('data-code');
+                    const textArea = document.createElement('textarea');
+                    textArea.value = code;
+                    document.body.appendChild(textArea);
+                    textArea.select();
+                    
+                    try {
+                        const successful = document.execCommand('copy');
+                        const msg = successful ? 'Copied!' : 'Unable to copy';
+                        
+                        // Update button text temporarily
+                        const originalHtml = this.innerHTML;
+                        this.innerHTML = '<i class="fas fa-check"></i> ' + msg;
+                        this.classList.add('copied');
+                        
+                        setTimeout(() => {
+                            this.innerHTML = originalHtml;
+                            this.classList.remove('copied');
+                        }, 2000);
+                    } catch (err) {
+                        console.error('Failed to copy: ', err);
+                    }
+                    
+                    document.body.removeChild(textArea);
+                });
             });
         });
-    });
-    
-    // Interactive form demo
+ // Interactive form demo
     const demoForm = document.getElementById('demoForm');
     if (demoForm) {
         demoForm.addEventListener('submit', function(e) {
@@ -175,7 +183,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         createCollapsibleSections();
     });
-});
+
 
 // Code example interaction enhancements
 document.addEventListener('DOMContentLoaded', function() {
@@ -247,4 +255,4 @@ document.addEventListener('DOMContentLoaded', function() {
             example.appendChild(toggleBtn);
         }
     });
-});t
+});

@@ -574,14 +574,14 @@ function checkSecurityHeaders() {
     const resultsDiv = document.getElementById('securityResults');
     resultsDiv.innerHTML = `
         <h4>Security Headers Analysis</h4>
-        <ul>
-            <li>✅ HTTPS: Enabled</li>
-            <li>✅ Content Security Policy: Not detected (needs implementation)</li>
-            <li>✅ X-Content-Type-Options: nosniff</li>
-            <li>✅ X-Frame-Options: DENY</li>
-            <li>⚠️ Strict-Transport-Security: Not detected</li>
-            <li>✅ X-XSS-Protection: 1; mode=block</li>
-        </ul>
+        <div style="display: flex; flex-direction: column; gap: 0.5em;">
+            <div>🔒 <strong>HTTPS:</strong> Enabled</div>
+            <div>⚠️ <strong>Content Security Policy:</strong> Not detected (needs implementation)</div>
+            <div>✅ <strong>X-Content-Type-Options:</strong> nosniff</div>
+            <div>✅ <strong>X-Frame-Options:</strong> DENY</div>
+            <div>⚠️ <strong>Strict-Transport-Security:</strong> Not detected</div>
+            <div>✅ <strong>X-XSS-Protection:</strong> 1; mode=block</div>
+        </div>
         <p><strong>Recommendation:</strong> Implement Content Security Policy and HSTS header for better security.</p>
     `;
 }
@@ -601,14 +601,14 @@ function analyzeSEO() {
     
     resultsDiv.innerHTML = `
         <h4>SEO Analysis Results</h4>
-        <ul>
-            <li>✅ Title Tag: "${title}" (Good length: ${title.length} chars)</li>
-            <li>${metaDesc ? `✅ Meta Description: "${metaDesc.getAttribute('content').substring(0, 100)}..."` : '❌ Meta Description: Missing'}</li>
-            <li>✅ Heading Structure:
-                <ul>${headingStructure}</ul>
+        <ul style="list-style: none; padding-left: 0;">
+            <li style="margin-bottom: 0.5em;">✅ Title Tag: "${title}" (Good length: ${title.length} chars)</li>
+            <li style="margin-bottom: 0.5em;">${metaDesc ? `✅ Meta Description: "${metaDesc.getAttribute('content').substring(0, 100)}..."` : '❌ Meta Description: Missing'}</li>
+            <li style="margin-bottom: 0.5em;">✅ Heading Structure:
+                <ul style="list-style: none; padding-left: 1em;">${headingStructure}</ul>
             </li>
-            <li>✅ Responsive Design: Mobile-friendly</li>
-            <li>✅ Page Load: Fast loading</li>
+            <li style="margin-bottom: 0.5em;">✅ Responsive Design: Mobile-friendly</li>
+            <li style="margin-bottom: 0.5em;">✅ Page Load: Fast loading</li>
         </ul>
         <p><strong>Recommendation:</strong> ${metaDesc ? 'Your basic SEO elements look good!' : 'Add a meta description to improve click-through rates.'}</p>
     `;
@@ -622,11 +622,11 @@ function runTestDemo() {
             <div style="background: #10b981; height: 24px; width: 85%; border-radius: 0.25rem; margin-bottom: 0.5rem;"></div>
             <p>85% Test Coverage - Good job!</p>
         </div>
-        <ul>
-            <li>✅ Unit Tests: 152 passed</li>
-            <li>✅ Integration Tests: 42 passed</li>
-            <li>✅ E2E Tests: 12 passed</li>
-            <li>⚠️ 15% uncovered code </li>
+        <ul style="list-style: none; padding-left: 0; margin-bottom: 1rem;">
+            <li><span style="color: #10b981;">✔️</span> Unit Tests: 152 passed</li>
+            <li><span style="color: #10b981;">✔️</span> Integration Tests: 42 passed</li>
+            <li><span style="color: #10b981;">✔️</span> E2E Tests: 12 passed</li>
+            <li><span style="color: #f59e42;">⚠️</span> 15% uncovered code</li>
         </ul>
         <p><strong>Recommendation:</strong> Focus on testing the utility functions in helpers.js to improve coverage.</p>
     `;
